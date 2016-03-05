@@ -1,0 +1,70 @@
+<html>
+   <head>
+
+     <title>Canvas Size</title>
+      <script src="jquery-1.11.3.js"></script>
+     <link rel = "stylesheet"  type = "text/css" 
+              href = "styles.css" />
+   
+     
+      <style> 
+         body {
+            background: #dddddd;
+         }
+		 
+		 /*element selectors: */
+		 canvas {
+		    margin: 20px;
+			/*important here for padding to be 0 for mouse calculations */
+            padding: 0px; 
+		 }
+		 /* class selectors: */
+		 .canvas {            
+            background: #ffffff;
+            border: thin inset #aaaaaa;
+         }
+
+         /*id selectors: */
+		 
+         #canvas1 {
+         }
+		  
+ 
+      </style>
+   </head>
+
+  <body>
+    <br>
+    <div>
+<!--        <form method="post" action="/weathercity">
+        City: <input name="city"><br>
+        <input type="submit" value="Get Weather">
+        </form> -->
+    </div>
+    <div id="temperatureDefault">
+    </div>
+    <div id="weatherinfo">
+    </div>
+    <div id="temperature">
+    </div>
+    <div>
+      Furnace State
+    </div>
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" disabled checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+    <br>
+    <div>
+      <button class="myButton1" onclick="increase()">Increase</button>
+      <button class="myButton2" onclick="decrease()">Decrease</button>
+    </div>
+    <p id="weatherinfo"></p>
+    <script src='client.js'></script>
+    <script src='styles.css'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </body>
+</html>

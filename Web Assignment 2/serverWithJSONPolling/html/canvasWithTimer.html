@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+- Example shows drawing strings on the canvas and
+  dragging individual strings around with the mouse.
+  
+  In this example the HTML elements are not being
+  dragged. The strings are javascript objects.
+  
+  When the canvas reacts to the mouse down event
+  other event handlers will be added to the DOM
+  to handle the mouse move and mouse release
+  
+  Notice in this source file there are no pre-attached
+  event handlers. They will be added using jQuery in the
+  supporting javascript file.
+
+
+-->
+<html>
+   <head>
+     <title>Canvas Size</title>
+     <script src="jquery-1.11.3.js"></script>
+     
+      <style> 
+         body {
+            background: #dddddd;
+         }
+		 
+		 /*element selectors: */
+		 canvas {
+		    margin: 20px;
+			/*important here for padding to be 0 for mouse calculations */
+            padding: 0px; 
+		 }
+		 /* class selectors: */
+		 .canvas {            
+            background: #ffffff;
+            border: thin inset #aaaaaa;
+         }
+
+         /*id selectors: */
+		 
+         #canvas1 {
+         }
+      .mypopup
+      {
+        background: #ffffff;
+        width:200px;
+        height:200px;
+      }
+      </style>
+   </head>
+
+  <body>
+    <!-- Add an optional button to open the popup -->
+  <button class="my_popup_open">Open popup</button>
+
+  <!-- Add content to the popup -->
+  <div id="my_popup" class="mypopup">
+
+    Player Name
+
+    <input type="text" name="playername" id="playername">
+
+    <!-- Add an optional button to close the popup -->
+
+    <button class="my_popup_close">Close</button>
+
+  </div>
+
+
+    <canvas id='canvas1' class='canvas' width='600' height='300'>
+      Canvas not supported
+    </canvas>
+
+    <script src='canvasWithTimer.js'></script>
+    <script src='jquery.popupoverlay.js'></script>
+  </body>
+</html>
